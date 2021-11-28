@@ -20,10 +20,14 @@
         <h5 class="text-info font-italic mb-4">${{ product.price }}</h5>
         <p class="product_desc">Product Description</p>
         <p class="text-justify product_text">{{ product.description }}</p>
-        {% if product.stock <= 0 %}
-        <p class="text-justify product_text">Out Of Stock</p>
+        {% if request.user.is_authenticated and request.user.first_name %}
+            {% if product.stock <= 0 %}
+            <p class="text-justify product_text">Out Of Stock</p>
+            {% else %}
+            <a href="{% url 'add_cart' product.id %}">Add To Cart</a>
+            {% endif %}
         {% else %}
-        <a href="{% url 'add_cart' product.id %}">Add To Cart</a>
+            <p>To order please <a href="{% url 'signup' %}">Register</a> or <a href="{% url 'login' %}">Log In</a></p>
         {% endif %}
     </div>
 </div>
