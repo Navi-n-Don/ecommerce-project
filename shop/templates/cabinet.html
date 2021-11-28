@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+    My Cabinet
+{% endblock %}
+
+{% block content %}
+<div class="col-10 mx-auto col-md-6 my-3">
+    <div class="container py-5">
+        <div class="row mt-5">
+            <div class="col-10 mx-auto col-md-6 my-3">
+                <img src="{% static 'img/account.png' %}" width="300" alt="About Us">
+            </div>
+        </div>
+    </div>
+    <div>
+        <h1 class="product_title">My Cabinet</h1>
+        <br>
+
+        <div class="container">
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text w-100" id="inputGroup-sizing-one">Username: </span>
+                </div>
+                <span class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-one">{{ request.user.username }}</span>
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text w-100" id="inputGroup-sizing-two">First Name: </span>
+                </div>
+                <span class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-two">{{ request.user.first_name }}</span>
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text w-100" id="inputGroup-sizing-three">Last Name: </span>
+                </div>
+                <span class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-three">{{ request.user.last_name }}</span>
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text w-100" id="inputGroup-sizing-four">E-mail: </span>
+                </div>
+                <span class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-four">{{ request.user.email }}</span>
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text w-100" id="inputGroup-sizing-five">Date joined: </span>
+                </div>
+                <span class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-five">{{ request.user.date_joined | date:"d M Y" }} in {{ request.user.date_joined | time:"H:i" }}</span>
+            </div>
+
+        </div>
+        <br>
+
+    </div>
+</div>
+{% endblock %}

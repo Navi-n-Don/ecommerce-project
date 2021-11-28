@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+    Contacts
+{% endblock %}
+
+{% block content %}
+<div class="col-10 mx-auto col-md-6 my-3">
+    <div class="container py-5">
+        <div class="row mt-5">
+            <div class="col-10 mx-auto col-md-6 my-3">
+                <img src="{% static 'img/contacts.png' %}" width="300" alt="About Us">
+            </div>
+        </div>
+    </div>
+    <div>
+        <h1 class="product_title">Our Contacts</h1>
+        <br>
+        <p class="product_desc">Consultation</p>
+        <div class="container">
+            <span style="display:block;text-align:right;margin-right:20%;color:#868e96;">Work Schedule</span>
+            <table class="table table-borderless">
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroup-sizing-one"><i class="material-icons cart-icon mx-2">phone</i></span>
+                                </div>
+                                <span class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-one">+38-050-1234567</span>
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroup-sizing-two"><i class="material-icons cart-icon mx-2">whatsapp</i></span>
+                                </div>
+                                <span class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-two">+38-050-1234567</span>
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroup-sizing-three"><i class="material-icons cart-icon mx-2">alternate_email</i></span>
+                                </div>
+                                <span class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-three">company@gmail.com</span>
+                            </div>
+                        </td>
+                        <td>
+                            <table class="table table-borderless">
+                                <tbody>
+                                    <tr>
+                                        <th>mon. to fri.</th>
+                                        <td>08:00 - 19:00</td>
+                                    </tr>
+                                    <tr>
+                                        <th>saturday</th>
+                                        <td>08:00 - 16:00</td>
+                                    </tr>
+                                    <tr>
+                                        <th>sunday</th>
+                                        <td>day off</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+        <br>
+        <p class="product_desc">Payment and delivery</p>
+        <p class="text-justify product_text">Suspendisse libero lorem, venenatis ut euismod a, ornare quis eros. Praesent ornare arcu diam, molestie aliquet orci blandit at. Morbi id nulla at diam euismod maximus. In blandit at nulla vitae tempus. Mauris facilisis leo risus. Nam pretium, tellus a tincidunt dictum, mi nulla tristique tellus, eget ornare nibh purus id nibh. Nunc volutpat scelerisque orci. Sed lectus est, elementum et convallis eu, interdum vel sapien. Aliquam sodales, eros sed condimentum facilisis, nibh metus sodales nibh, et varius ante ex at ante. Nam quam dui, eleifend hendrerit accumsan ut, imperdiet eu velit. Nam quis lorem et dolor dignissim interdum eu in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. </p>
+        <p class="text-justify product_text">Duis consequat mauris id tellus euismod pretium. Vivamus laoreet scelerisque dapibus. Aliquam erat volutpat. Vestibulum gravida ex ut dictum iaculis. Vivamus egestas dolor eget sagittis ultrices. Ut velit turpis, consequat in porta eget, fringilla in sapien. Phasellus dapibus vel ex vel dignissim. Vivamus vehicula erat rutrum lacus bibendum placerat.</p>
+        <br>
+        <p class="product_desc">Location</p>
+        <img src="{% static 'img/map.png' %}" class="img-thumbnail mx-auto d-block" alt="Location">
+    </div>
+</div>
+{% endblock %}

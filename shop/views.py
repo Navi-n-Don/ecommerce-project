@@ -120,3 +120,15 @@ def loginView(request):
 def signoutView(request):
     logout(request)
     return redirect('login')
+
+
+def about(request):
+    return render(request, 'about.html')
+
+
+def contacts(request):
+    return render(request, 'contacts.html')
+
+
+def cabinet(request):
+    return render(request, 'cabinet.html')
